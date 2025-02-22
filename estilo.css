@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://static.videezy.com/system/resources/thumbnails/000/041/198/original/4K-13.jpg') no-repeat center center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  background-size: cover;
+  color: #fff;
+  
+}
+
+.nav {
+  background: #9e00b2;
+  padding: 10px 20px;
+  text-align: left;
+}
+.nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1rem;    
+}
+.nav a:hover {
+  color: #ffbf00;
+}
+header {   
+  background-size: cover;
+  text-align: center;
+  padding: 40px 0;
+}
+.titulo {
+  margin: 0;
+  font-size: 70px;
+  letter-spacing: 0.1em;
+  font-family: 'Lazer84';
+  color: #ffce00;
+    
+}
+.subtitulo {
+
+  position: absolute;
+  top: 13%; 
+  left: 63%;
+  transform: translate(-30%, -10%);
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  font-family: 'Neon';
+  color: #ffffff;
+  text-shadow: 
+  0 1px 1px rgba(255, 255, 255, 0.3),
+  0 3px 3px rgb(230, 0, 255);
+    
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #9e00b2;
+  border-radius: 10px;
+}
+.intro {
+  font-size: 1.3rem;
+}
+footer {
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+  padding: 10px 0;
+  background: #111;
+  font-size: 0.9rem;
+  background-color: transparent;
+}
+/* ---------------------- fim do codigo principal -----------------*/
+ 
+@font-face {
+  font-family: 'Lazer84';
+  src: url('Fonts/Lazer84.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neon';
+  src: url('Fonts/Neon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --------------------- fim do codigo das fontes ------------------*/
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  text-align: center;
+}
+  
+.filme {
+  background-color: #9e00b2;
+  padding: 30px;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+  
+.filme:hover {
+  transform: scale(1.05);
+}
+  
+.filme img {
+  width: 60%;
+  border-radius: 10px;
+}
+  
+.filme h3 {
+  color: #fff;
+  margin-top: 10px;
+}
+/* ----------------------------- fim do codigo do catalogo -----------------*/   
+.contact-container{
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #a14ebf;
+  border-radius: 10px;
+}
+.contact-container h2{
+  text-align: center;
+}
+.contact-container label {
+  font-weight: bold;
+}
+.contact-container input, .contact-container textarea {
+  width: 94%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact-container button {
+  background: #01eaa9;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
+ 
+}
+.contact-container button:hover {
+  background: #008a63;
+}
+/* ----------------------------- fim do codigo do contato ------------------*/
