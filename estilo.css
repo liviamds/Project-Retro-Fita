@@ -199,7 +199,7 @@ footer {
 }
 
 /* Media Query para telas muito pequenas */
-@media (max-width: 480px) {
+@media (max-width: 1px) {
   .titulo {
     font-size: 32px;
   }
