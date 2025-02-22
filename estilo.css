@@ -12,7 +12,6 @@ body {
   background: #9e00b2;
   padding: 10px 20px;
   text-align: left;
-  /* Adicionado flexbox para responsividade */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -32,8 +31,7 @@ header {
   background-size: cover;
   text-align: center;
   padding: 40px 0;
-  position: relative; /* Mantido para o posicionamento do .subtitulo */
-  /* Ajuste mínimo para centralizar os elementos */
+  position: relative; /* Para posicionamento do .subtitulo */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,13 +64,13 @@ header {
   text-align: center;
   background-color: #9e00b2;
   border-radius: 10px;
-  /* Flexbox para melhor organização dos elementos internos */
   display: flex;
   flex-wrap: wrap;
 }
 
 .intro {
   font-size: 1.3rem;
+  width: 100%;
 }
 
 footer {
@@ -84,7 +82,8 @@ footer {
   font-size: 0.9rem;
   background-color: transparent;
 }
-/* ---------------------- fim do codigo principal -----------------*/
+
+/* ---------------------- fim do código principal -----------------*/
  
 @font-face {
   font-family: 'Lazer84';
@@ -99,7 +98,7 @@ footer {
   font-style: normal;
 }
 
-/* --------------------- fim do codigo das fontes ------------------*/
+/* --------------------- fim do código das fontes ------------------*/
 
 .catalogo {
   display: grid;
@@ -128,7 +127,7 @@ footer {
   color: #fff;
   margin-top: 10px;
 }
-/* ----------------------------- fim do codigo do catalogo -----------------*/   
+/* ----------------------------- fim do código do catálogo -----------------*/   
 
 .contact-container {
   width: 100%;
@@ -137,7 +136,6 @@ footer {
   padding: 20px;
   background-color: #a14ebf;
   border-radius: 10px;
-  /* Uso mínimo de flexbox para organizar o formulário */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -171,8 +169,9 @@ footer {
 .contact-container button:hover {
   background: #008a63;
 }
-/* ----------------------------- fim do codigo do contato ------------------*/
+/* ----------------------------- fim do código do contato ------------------*/
 
+/* Media Query para telas menores */
 @media (max-width: 768px) {
   .titulo {
     font-size: 40px;
@@ -187,5 +186,32 @@ footer {
   }
   .container {
     flex-direction: column;
+    padding: 20px;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  .catalogo {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+}
+
+/* Media Query para telas muito pequenas */
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 32px;
+  }
+  .nav a {
+    margin: 5px 10px;
+    font-size: 0.9rem;
+  }
+  .catalogo {
+    grid-template-columns: 1fr;
+  }
+  .contact-container input,
+  .contact-container textarea {
+    width: 90%;
   }
 }
