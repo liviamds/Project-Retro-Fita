@@ -12,7 +12,6 @@ body {
   background: #9e00b2;
   padding: 10px 20px;
   text-align: left;
-  /* Ajuste mínimo para distribuir os links */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -63,7 +62,6 @@ header {
   background-color: #9e00b2;
   border-radius: 10px;
   display: flex;
-  /* Permite que os itens se reorganicem se necessário */
   flex-wrap: wrap;
 }
 
@@ -134,7 +132,6 @@ footer {
   padding: 20px;
   background-color: #a14ebf;
   border-radius: 10px;
-  /* Mantém a estrutura original; se precisar, pode-se usar flex aqui */
 }
 .contact-container h2 {
   text-align: center;
@@ -166,13 +163,12 @@ footer {
 }
 /* ----------------------------- fim do código do contato ------------------*/
 
-/* Media Queries para dispositivos móveis */
 @media (max-width: 768px) {
   .titulo {
     font-size: 40px;
   }
   .subtitulo {
-    /* Exibe o subtítulo abaixo do título em telas menores */
+  
     position: static;
     transform: none;
     font-size: 1.8rem;
