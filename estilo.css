@@ -6,13 +6,17 @@ body {
   line-height: 1.5;
   background-size: cover;
   color: #fff;
-  
 }
 
 .nav {
   background: #9e00b2;
   padding: 10px 20px;
   text-align: left;
+  /* Adicionado flexbox para responsividade */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .nav a {
   color: #fff;
@@ -23,10 +27,16 @@ body {
 .nav a:hover {
   color: #ffbf00;
 }
+
 header {   
   background-size: cover;
   text-align: center;
   padding: 40px 0;
+  position: relative; /* Mantido para o posicionamento do .subtitulo */
+  /* Ajuste mínimo para centralizar os elementos */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .titulo {
   margin: 0;
@@ -34,10 +44,8 @@ header {
   letter-spacing: 0.1em;
   font-family: 'Lazer84';
   color: #ffce00;
-    
 }
 .subtitulo {
-
   position: absolute;
   top: 13%; 
   left: 63%;
@@ -47,10 +55,10 @@ header {
   font-family: 'Neon';
   color: #ffffff;
   text-shadow: 
-  0 1px 1px rgba(255, 255, 255, 0.3),
-  0 3px 3px rgb(230, 0, 255);
-    
+    0 1px 1px rgba(255, 255, 255, 0.3),
+    0 3px 3px rgb(230, 0, 255);
 }
+
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -58,11 +66,15 @@ header {
   text-align: center;
   background-color: #9e00b2;
   border-radius: 10px;
+  /* Flexbox para melhor organização dos elementos internos */
   display: flex;
+  flex-wrap: wrap;
 }
+
 .intro {
   font-size: 1.3rem;
 }
+
 footer {
   width: 100%;
   margin-top: 100px;
@@ -117,21 +129,28 @@ footer {
   margin-top: 10px;
 }
 /* ----------------------------- fim do codigo do catalogo -----------------*/   
-.contact-container{
+
+.contact-container {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   background-color: #a14ebf;
   border-radius: 10px;
+  /* Uso mínimo de flexbox para organizar o formulário */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.contact-container h2{
+.contact-container h2 {
   text-align: center;
 }
 .contact-container label {
   font-weight: bold;
+  width: 100%;
 }
-.contact-container input, .contact-container textarea {
+.contact-container input, 
+.contact-container textarea {
   width: 94%;
   padding: 10px;
   margin-top: 5px;
@@ -148,9 +167,25 @@ footer {
   cursor: pointer;
   width: 100%;
   font-size: large;
- 
 }
 .contact-container button:hover {
   background: #008a63;
 }
 /* ----------------------------- fim do codigo do contato ------------------*/
+
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 40px;
+  }
+  .subtitulo {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    font-size: 1.8rem;
+    margin-top: 10px;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
