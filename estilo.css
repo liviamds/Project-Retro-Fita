@@ -12,6 +12,7 @@ body {
   background: #9e00b2;
   padding: 10px 20px;
   text-align: left;
+  /* Ajuste mínimo para distribuir os links */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -31,10 +32,7 @@ header {
   background-size: cover;
   text-align: center;
   padding: 40px 0;
-  position: relative; /* Para posicionamento do .subtitulo */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
 }
 .titulo {
   margin: 0;
@@ -65,12 +63,12 @@ header {
   background-color: #9e00b2;
   border-radius: 10px;
   display: flex;
+  /* Permite que os itens se reorganicem se necessário */
   flex-wrap: wrap;
 }
 
 .intro {
   font-size: 1.3rem;
-  width: 100%;
 }
 
 footer {
@@ -136,16 +134,13 @@ footer {
   padding: 20px;
   background-color: #a14ebf;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* Mantém a estrutura original; se precisar, pode-se usar flex aqui */
 }
 .contact-container h2 {
   text-align: center;
 }
 .contact-container label {
   font-weight: bold;
-  width: 100%;
 }
 .contact-container input, 
 .contact-container textarea {
@@ -171,15 +166,14 @@ footer {
 }
 /* ----------------------------- fim do código do contato ------------------*/
 
-/* Media Query para telas menores */
+/* Media Queries para dispositivos móveis */
 @media (max-width: 768px) {
   .titulo {
     font-size: 40px;
   }
   .subtitulo {
-    position: relative;
-    top: auto;
-    left: auto;
+    /* Exibe o subtítulo abaixo do título em telas menores */
+    position: static;
     transform: none;
     font-size: 1.8rem;
     margin-top: 10px;
@@ -198,8 +192,7 @@ footer {
   }
 }
 
-/* Media Query para telas muito pequenas */
-@media (max-width: 1px) {
+@media (max-width: 480px) {
   .titulo {
     font-size: 32px;
   }
